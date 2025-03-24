@@ -81,9 +81,23 @@ function isPrime(num) {
   return [true, count];
 }
 
-// todo will explain the pattern printing in upcoming sessions
-// Print a hollow square pattern.
+// will explain the pattern printing in upcoming sessions => taken after the session 4
 // Print a right-angled triangle pattern of asterisks.
+function patterns(n = 0) {
+  for (let row = 0; row < n; row++) {
+    let result = [];
+    for (let col = 0; col < n; col++) {
+      if ((row < n / 2 && col < n / 2) || (row >= n / 2 && col >= n / 2))
+        if ((row + col) % 2 == 0) result.push("*");
+        else result.push("#");
+      else
+        result.push(" ")
+    }
+    console.log(result.join(""));
+  }
+}
+patterns(10);
+// Print a hollow square pattern.
 
 module.exports = {
   factorial,
