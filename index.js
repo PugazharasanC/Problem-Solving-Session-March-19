@@ -22,3 +22,26 @@ inp.on("close", () => {
   //end-here
 });
 // type input.txt | node index.js
+
+
+
+// const obj = {
+//   a: 6,
+//   b: function () {
+//     console.log(this.a);//6
+//     const c = () => {
+//       console.log(this.a);//6
+//     }
+//     c();
+//   }
+// }
+
+// const b = obj.b;/* function () {
+//   console.log(this.a); undefined
+//   const c = () => {
+//     console.log(this.a); undefined
+//   };
+//   c();
+// }; */
+// b()
+// obj.b()
